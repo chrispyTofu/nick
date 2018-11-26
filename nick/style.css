@@ -73,8 +73,8 @@ body {
      padding: 10px;
      text-transform: uppercase;
      letter-spacing: 5px;
-
  }
+
 .flex-container {
     display: flex;
     justify-content: end;
@@ -107,37 +107,48 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  
-  .overlay {
-    transition: .5s ease;
-    opacity: 0;
+}
+
+.overlay {
     position: absolute;
-    top: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fff;
+}
+  
+.container:hover .overlay {
+    opacity: 0.8;
+}
+
+.hText .title {
+    color: #505a5e;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
     left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    top: 50%;
     text-align: center;
-  }
-  
-  .container:hover .image {
-    opacity: 0.3;
-  }
-  
-  .container:hover .overlay {
-    opacity: 1;
-  }
-  
-  .hText {
-    background-color: #454955;
-    color: white;
-    font-size: 16px;
-    padding: 16px 32px;
-  }
+    transform: translate(-50%, -50%);
+}
+
+.hText .title a {
+    text-decoration: none;
+    color: #505a5e;
+}
+
+.hText .title a:hover {
+    text-decoration: none;
+    color: #35383a;
+}
 
 
+  
 
 
 
@@ -151,6 +162,9 @@ body {
         flex: 50%;
         max-width: 50%;
     }
+    .htext {
+        font-size: 2vw;
+    }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -158,5 +172,11 @@ body {
     .column {
         flex: 100%;
         max-width: 100%;
+    }
+    .htext .title {
+        font-size: 15px;
+    }
+    .overlay {
+        opacity: 0.8;
     }
 }
