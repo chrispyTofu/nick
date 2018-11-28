@@ -9,9 +9,13 @@ body {
 }
 
 .title {
-    transform: translate(20%, 100%);
-    width: 70%;
-    height: auto;
+    margin-top: 0;
+    
+}
+.subtitle {
+    margin-bottom: 0;
+    color: #504d4e;
+
 }
 .box {
     padding: 10px;
