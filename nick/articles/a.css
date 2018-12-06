@@ -11,7 +11,6 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 100px;
-    margin-right: 50px;
     margin-top: 25px;
 }
 .title{
@@ -23,22 +22,32 @@ body {
     display: inline-block;
     text-align: left;
 }
-.leftAlign h4{
+.leftAlign h5{
     color: #b33f62;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
-.leftAlign h3{
+.leftAlign h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.leftAlign h4{
     color: #7f7f7f;
 }
 
-.title h1 {
-    text-transform: uppercase;
-}
+
 .titleImg {
     flex: 2;
     order: 2;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 
+}
+hr{
+    width: 50%;
+    margin-top: 0;
 }
 
 @media screen and (max-width: 1300px) {
