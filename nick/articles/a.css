@@ -8,15 +8,21 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
+    
+}
+.row{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-left: 100px;
-    margin-top: 25px;
+    width: 100%;
 }
 .title{
     flex: 2;
     order: 1;
     text-align: center;
+    width: 50%;
 }
 .leftAlign{
     display: inline-block;
@@ -38,53 +44,70 @@ body {
     color: #7f7f7f;
 }
 
-
 .titleImg {
-    flex: 2;
+    background: url("../assets/1.jpg");
+    background-color: #cccccc;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 50%;
     order: 2;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 
 }
 hr{
+    margin-top: 20px;
     width: 50%;
-    margin-top: 0;
+
+}
+.par{
+    width: 50%;
+    transform: translateX(50%);
 }
 
 @media screen and (max-width: 1300px) {
-    .container{
-        display: flex;
+    .row{
         flex-direction: column;
-        margin: 0;
-        transform: translateY(-50%);
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
+
     .title{
         order: 2;
+        width: 90%;
     }
+
     .titleImg {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         order: 1;
+        width: 100%;
+        height: 35vh;
+        background-position: 50% 85%;
+    }
+    hr{
         margin-top: 0;
-        height: auto;
-       
+    }
+    .par{
+        width: 80%;
+        transform: translateX(12%);
     }
     
 }
 @media screen and (max-width: 768px) {
-    .container{
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        transform: translateY(-15%);
-    }
     .title{
         order: 2;
+        font-size: 10px;
     }
-    .titleImg {
+    .titleImg {     
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         order: 1;
+        height: 25vh;     
+    }
+    hr{
         margin-top: 0;
-        height: auto;
-       
     }
     
 }
